@@ -5,9 +5,28 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_StartScreen</sprite>
+    <sprite>sprites\spr_StoneSource</sprite>
+    <sprite>sprites\spr_StoneFalling</sprite>
+    <sprite>sprites\spr_Climber</sprite>
+    <sprite>sprites\spr_Yeti</sprite>
+    <sprite>sprites\spr_Background</sprite>
+    <sprite>sprites\spr_Bird</sprite>
+    <sprite>sprites\spr_Goat</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_StoneSource</object>
+    <object>objects\obj_StoneFalling</object>
+    <object>objects\obj_StartScreen</object>
+    <object>objects\obj_Climber</object>
+    <object>objects\obj_Yeti</object>
+    <object>objects\obj_Bird</object>
+    <object>objects\obj_Highscore</object>
+    <object>objects\obj_Goat</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
