@@ -15,8 +15,14 @@
     <sprite>sprites\spr_Bird</sprite>
     <sprite>sprites\spr_Goat</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_Mountain</background>
+    <background>background\bg_sky</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\PositionByIndex.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_StoneSource</object>
     <object>objects\obj_StoneFalling</object>
@@ -26,10 +32,11 @@
     <object>objects\obj_Bird</object>
     <object>objects\obj_Highscore</object>
     <object>objects\obj_Goat</object>
+    <object>objects\obj_Spawner</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_StartScreen</room>
     <room>rooms\rm_Mountain</room>
+    <room>rooms\rm_StartScreen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
