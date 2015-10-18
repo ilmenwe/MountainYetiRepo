@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health = 2;
+            <string>self.myHealth = 2;
 </string>
           </argument>
         </arguments>
@@ -48,19 +48,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y+=8;
+            <string>self.y+=8;
 
-if(y &gt; 70000)
+if(self.y &gt; 700)
 {
    instance_destroy();
-};
+}
 
+if(self.myHealth &lt; 1)
+{
+   instance_destroy();
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_Climber">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,10 +81,13 @@ if(y &gt; 70000)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health -=1;
-if(health == 0)
+            <string>if(self.myHealth == 2)
 {
-instance_destroy();
+    draw_sprite_ext(spr_StoneFalling,0,self.x,self.y,1,1,self.y,c_white,1);
+}
+else
+{
+    draw_sprite_ext(spr_StoneFalling,1,self.x,self.y,1,1,self.y,c_white,1);
 }
 </string>
           </argument>
