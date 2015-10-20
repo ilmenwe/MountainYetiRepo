@@ -4,7 +4,12 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_Break</sound>
+    <sound>sound\snd_Hit</sound>
+    <sound>sound\snd_Woo</sound>
+    <sound>sound\snd_Die</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_StartScreen</sprite>
     <sprite>sprites\spr_StoneSource</sprite>
@@ -14,6 +19,7 @@
     <sprite>sprites\spr_Background</sprite>
     <sprite>sprites\spr_Bird</sprite>
     <sprite>sprites\spr_Goat</sprite>
+    <sprite>sprites\sprite8</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Mountain</background>
@@ -21,6 +27,20 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="states">
+      <script>scripts\st_Parent.gml</script>
+      <scripts name="goat">
+        <script>scripts\st_GoatIdle.gml</script>
+        <script>scripts\st_GoatJump.gml</script>
+        <script>scripts\st_GoatDropStone.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="FSM">
+      <script>scripts\FSM_Init.gml</script>
+      <script>scripts\FSM_Next.gml</script>
+      <script>scripts\FSM_Tick.gml</script>
+      <script>scripts\FSM_EnterState.gml</script>
+    </scripts>
     <script>scripts\PositionByIndex.gml</script>
   </scripts>
   <objects name="objects">
@@ -33,6 +53,7 @@
     <object>objects\obj_Highscore</object>
     <object>objects\obj_Goat</object>
     <object>objects\obj_Spawner</object>
+    <object>objects\obj_Statefull</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Mountain</room>
